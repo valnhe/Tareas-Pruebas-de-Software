@@ -10,32 +10,23 @@ Esta tarea corresponde a una solución para gestionar el inventario de productos
 <details>
 <summary>Tabla de contenidos</summary>
 
-- [Web oficial de La Velada V](#tareas-de-inf331---pruebas-de-software)
-- [Características principales](#características-principales)
-  - [Capturas de pantalla de la web de La Velada V](#capturas-de-pantalla-de-la-web-de-la-velada-v)
-- [Para empezar](#para-empezar)
-  - [Prerequisitos](#prerequisitos)
-  - [Instalación](#instalación)
-- [Contribuir al proyecto](#cómo-contribuir)
-- [🛠️ Stack](#️-stack)
+- [Tareas de INF331 - Pruebas de Software](#tareas-de-inf331---pruebas-de-software)
+- [Grupo de Trabajo](#-grupo-de-trabajo)
+- [Instalación](#instalación)
+- [¿Cómo usar?](#cómo-usar)
+- [Licencia](#licencia)
 
 </details>
 
-
-
-Nombre
-Descripción
-Instalación
-Cómo usar
-Cómo contribuir
-Licencia
-
-
 ## 💼 Grupo de trabajo
-Este es el repositorio de **camus**, cuyos integrantes son:
-- Nicolás Armijo - ROL: 202173004-4
 - Valentina Castillo  - ROL: 202021006-3
-- Franco Salgado - ROL: 202073058-k
+- Javier Hormaechea - ROL: 202003017-0
+
+## Instalación
+blabla
+
+## ¿Cómo usar?
+blabla
 
 ## ¿Cómo contribuir?
 
@@ -49,3 +40,6 @@ Aquí tienes una guía rápida:
 5. Realiza tus Cambios (`git commit -m 'Add: alguna CaracterísticaIncreible'`)
 6. Haz Push a la Rama (`git push origin feature/CaracteristicaIncreible`)
 7. Abre una [_pull request_](https://github.com/valnhe/Tareas-Pruebas-de-Software/pulls)
+
+## Licencia
+blabla
