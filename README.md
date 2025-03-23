@@ -16,7 +16,7 @@ Esta tarea corresponde a una solución para gestionar el inventario de productos
 - [Para empezar](#para-empezar)
   - [Prerequisitos](#prerequisitos)
   - [Instalación](#instalación)
-- [Contribuir al proyecto](https://github.com/valnhe/Tareas-Pruebas-de-Software/edit/main/README.md#cómo-contribuir)
+- [Contribuir al proyecto](#cómo-contribuir)
 - [🛠️ Stack](#️-stack)
 
 </details>
