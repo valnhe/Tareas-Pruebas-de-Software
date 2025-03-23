@@ -30,7 +30,7 @@ blabla
 
 ## ¿Cómo contribuir?
 
-Si tienes alguna sugerencia que podría mejorar el proyecto, por favor haz un [_fork_](https://github.com/valnhe/Tareas-Pruebas-de-Software/fork) del repositorio y crea una [_pull request_](https://github.com/valnhe/Tareas-Pruebas-de-Software/pulls). O simplemente puedes crear una [_issua_](hhttps://github.com/valnhe/Tareas-Pruebas-de-Software/issues).
+Si tienes alguna sugerencia que podría mejorar el proyecto, por favor haz un [_fork_](https://github.com/valnhe/Tareas-Pruebas-de-Software/fork) del repositorio y crea una [_pull request_](https://github.com/valnhe/Tareas-Pruebas-de-Software/pulls). O simplemente puedes crear una [_issue_](hhttps://github.com/valnhe/Tareas-Pruebas-de-Software/issues) y lo estaremos leyendo 😊.
 Aquí tienes una guía rápida:
 
 1. Haz un [_fork_](https://github.com/valnhe/Tareas-Pruebas-de-Software/fork) del Proyecto
