@@ -73,6 +73,3 @@ Aquí tienes una guía rápida:
 5. Realiza tus Cambios (`git commit -m 'Add: alguna CaracterísticaIncreible'`)
 6. Haz Push a la Rama (`git push origin feature-CaracteristicaIncreible`)
 7. Abre una [_pull request_](https://github.com/valnhe/Tareas-Pruebas-de-Software/pulls)
-
-## Licencia
-blabla
