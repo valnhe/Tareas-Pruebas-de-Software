@@ -14,6 +14,7 @@ def mostrar_menu():
     print("\nGestión de Inventario - Bodega")
     print("1. Agregar Producto")
     print("2. Ver Productos")
+    print("3. Generar Reporte") #esta opcion seguramente acabe siendo la ultima, cuando terminemos todo las reordenamos
     print("x. Salir")
     
 while True:
@@ -56,6 +57,23 @@ while True:
         print("SUK | Nombre | Descripción | Cantidad | Precio | Categoría")
         for producto in productos:
             print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]} | {producto[5]}")
+            
+    elif opcion == "3":
+        productos = read_products()
+        cantidad = 0
+        valor_total = 0
+        agotados = []
+        for producto in productos:
+            if producto[3] == 0:
+                agotados.append(producto[1])
+            else:
+                cantidad += producto[3]
+                valor_total += producto[4] * producto[3]
+        print("\nReporte:")
+        print(f"Cantidad de productos: {cantidad}")
+        print(f"Valor total del inventario: {valor_total}")
+        if len(agotados):
+            print(f"Productos agotados: {', '.join(agotados)}")
 
 
     elif opcion == 'x':
