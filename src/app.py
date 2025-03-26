@@ -1,5 +1,6 @@
 
 from CRUD import create_product
+from CRUD import read_products
 
 import sentry_sdk
 sentry_sdk.init(
@@ -12,6 +13,7 @@ sentry_sdk.init(
 def mostrar_menu():
     print("\nGestión de Inventario - Bodega")
     print("1. Agregar Producto")
+    print("2. Ver Productos")
     print("x. Salir")
     
 while True:
@@ -48,7 +50,14 @@ while True:
         categoria = input("Categoría: ")
         create_product(nombre, descripcion, int(cantidad), float(precio), categoria)
 
-        
+    elif opcion == '2':
+        productos = read_products()
+        print("\nListado de Productos")
+        print("SUK | Nombre | Descripción | Cantidad | Precio | Categoría")
+        for producto in productos:
+            print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]} | {producto[5]}")
+
+
     elif opcion == 'x':
         print("Gracias por usar la aplicación.")
         break

@@ -15,3 +15,11 @@ def create_product(nombre, descripcion, cantidad, precio, categoria):
     except sqlite3.IntegrityError:
         print("Error: SKU ya registrado.")
     conexion.close()
+
+def read_products():
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM productos;")
+    productos = cursor.fetchall()  # Devuelve una lista de tuplas
+    conn.close()
+    return productos
