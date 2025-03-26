@@ -36,5 +36,24 @@ def create_table():
         if conn:
             conn.close()
 
+# Función para crear una tabla
+def create_auth():
+    """Crea la tabla de usuarios en la base de datos"""
+    conn = create_connection()
+    try:
+        cursor = conn.cursor()
+        cursor.execute('''CREATE TABLE IF NOT EXISTS usuarios (
+                            sku INTEGER PRIMARY KEY AUTOINCREMENT,
+                            nombre TEXT NOT NULL,
+                            contraseña TEXT NOT NULL
+                        );''')
+        print("Tabla usuarios creada exitosamente")
+    except Error as e:
+        print(e)
+    finally:
+        if conn:
+            conn.close()
+
 # Llamada para crear la tabla
 create_table()
+create_auth()

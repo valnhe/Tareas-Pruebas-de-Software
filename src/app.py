@@ -1,6 +1,8 @@
 
 from CRUD import create_product
 from CRUD import read_products
+from CRUD import create_user
+from CRUD import verify_user
 
 import sentry_sdk
 sentry_sdk.init(
@@ -9,6 +11,11 @@ sentry_sdk.init(
     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
     send_default_pii=True,
 )
+def menu_inicio():
+    print("Gestión de Inventario - Bodega")
+    print("1. Registrarse")
+    print("2. Iniciar Sesión")
+    print("x. Salir")
 
 def mostrar_menu():
     print("\nGestión de Inventario - Bodega")
@@ -17,7 +24,33 @@ def mostrar_menu():
     print("3. Generar Reporte") #esta opcion seguramente acabe siendo la ultima, cuando terminemos todo las reordenamos
     print("x. Salir")
     
+sesion = False
 while True:
+    menu_inicio()
+    
+    opcion = input("Selecciona una opción: ")
+    
+    if opcion == "1":
+        nombre = input("Ingrese su nombre de usuario: ")
+        contraseña = input("Ingrese su contraseña: ")
+        conf = input("¿Esta seguro? (si/no): ")
+        if conf == "si":
+            create_user(nombre,contraseña)
+        
+    elif opcion == "2":
+        nombre = input("Ingrese su nombre de usuario: ")
+        contraseña = input("Ingrese su contraseña: ")
+        conf = input("¿Esta seguro? (si/no): ")
+        if conf == "si":
+            sesion = verify_user(nombre, contraseña)
+            if sesion:
+                break
+    elif opcion == "3":
+        break
+    
+    
+    
+while sesion:
     mostrar_menu()
         
     opcion = input("Selecciona una opción (1-5): ")
