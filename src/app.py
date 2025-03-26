@@ -28,7 +28,7 @@ while True:
 
         while True:
             try:
-                cantidad = input("Cantidad: ")
+                cantidad = int(input("Cantidad: "))
                 if cantidad < 0:
                     print("La cantidad debe ser un número positivo.")
                 else:
