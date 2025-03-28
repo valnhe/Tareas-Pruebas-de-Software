@@ -1,9 +1,17 @@
 
-from CRUD import create_product
+from CRUD import update_stock_product
 from CRUD import read_products
-from CRUD import create_user
-from CRUD import verify_user
-from CRUD import update_product
+
+from authentication import create_user
+from authentication import verify_user
+
+from functions import menu_inicio
+from functions import mostrar_menu
+from functions import menu_gestionar_inventario
+from functions import menu_ver_productos
+
+
+# Configuración de Sentry
 
 import sentry_sdk
 sentry_sdk.init(
@@ -12,106 +20,63 @@ sentry_sdk.init(
     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
     send_default_pii=True,
 )
-def menu_inicio():
-    print("Gestión de Inventario - Bodega")
-    print("1. Registrarse")
-    print("2. Iniciar Sesión")
-    print("x. Salir")
 
-def mostrar_menu():
-    print("\nGestión de Inventario - Bodega")
-    print("1. Agregar Producto")
-    print("2. Ver Productos")
-    print("3. Gestionar inventario")
-    print("4. Generar Reporte") #esta opcion seguramente acabe siendo la ultima, cuando terminemos todo las reordenamos
-    print("x. Salir")
-    
+# Autenticación
 sesion = False
 while True:
     menu_inicio()
     
-    opcion = input("Selecciona una opción(1-2): ")
+    opcion = input("\nSelecciona una opción: ")
     
     if opcion == "1":
-        nombre = input("Ingrese su nombre de usuario: ")
-        contraseña = input("Ingrese su contraseña: ")
-        conf = input("¿Esta seguro? (si/no): ")
+        nombre = input(" > Ingrese su nombre de usuario: ")
+        contraseña = input(" > Ingrese su contraseña: ")
+        conf = input(" >> ¿Está seguro? (si/no): ")
         if conf == "si":
             create_user(nombre,contraseña)
         
     elif opcion == "2":
-        nombre = input("Ingrese su nombre de usuario: ")
-        contraseña = input("Ingrese su contraseña: ")
-        conf = input("¿Esta seguro? (si/no): ")
+        nombre = input(" > Ingrese su nombre de usuario: ")
+        contraseña = input(" > Ingrese su contraseña: ")
+        conf = input(" >> ¿Está seguro? (si/no): ")
         if conf == "si":
             sesion = verify_user(nombre, contraseña)
             if sesion:
+                print("\n>>> Sesión iniciada con éxito.")
                 break
     elif opcion == "3":
-        print("Gracias por usar la aplicación.")
+        print("\n >>>¡Nos vemos luego!")
         break
     else:
         print("Opción inválida. Intenta de nuevo.")
-    
-    
-    
+
+# Menú principal
 while sesion:
     mostrar_menu()
         
-    opcion = input("Selecciona una opción (1-5): ")
+    opcion = input("\n Selecciona una opción: ")
         
-    if opcion == '1':
-        nombre = input("Nombre del producto: ")
-        descripcion = input("Descripción: ")
+    if opcion == '1': #Gestionar Inventario
+        menu_gestionar_inventario() 
 
+    elif opcion == '2': #Ver Productos
+        menu_ver_productos()
+        
+    elif opcion == "3": #Gestionar Stock
+        producto = input("\n > Ingrese el nombre del producto cuyo stock desea actualizar: ")
         while True:
             try:
-                cantidad = int(input("Cantidad: "))
+                cantidad = int(input(" > Cantidad: "))
                 if cantidad < 0:
                     print("La cantidad debe ser un número positivo.")
                 else:
                     break
             except ValueError:
                 print("Por favor, ingresa un número válido para la cantidad.")
-        
-
-        while True:
-            precio = input("Precio unitario: ")
-            try:
-                precio = float(precio)
-                if precio >= 0:
-                    break
-                else:
-                    print("El precio debe ser un número positivo.")
-            except ValueError:
-                print("Por favor, ingresa un precio válido.")
-
-        categoria = input("Categoría: ")
-        create_product(nombre, descripcion, int(cantidad), float(precio), categoria)
-
-    elif opcion == '2':
-        productos = read_products()
-        print("\nListado de Productos")
-        print("SUK | Nombre | Descripción | Cantidad | Precio | Categoría")
-        for producto in productos:
-            print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]} | {producto[5]}")
+        update_stock_product(producto, cantidad)
             
-    elif opcion == "3":
-        producto = input("Producto cuyo stock desea actualizar: ")
-        while True:
-            try:
-                cantidad = int(input("Cantidad: "))
-                if cantidad < 0:
-                    print("La cantidad debe ser un número positivo.")
-                else:
-                    break
-            except ValueError:
-                print("Por favor, ingresa un número válido para la cantidad.")
-        update_product(producto, cantidad)
             
-    
-            
-    elif opcion == "4":
+    elif opcion == "4": #Generar Reporte
         productos = read_products()
         cantidad = 0
         valor_total = 0
@@ -123,14 +88,13 @@ while sesion:
                 cantidad += producto[3]
                 valor_total += producto[4] * producto[3]
         print("\nReporte:")
-        print(f"Cantidad de productos: {cantidad}")
-        print(f"Valor total del inventario: {valor_total}")
+        print(f"> Cantidad de productos: {cantidad}")
+        print(f"> Valor total del inventario: {valor_total}")
         if len(agotados):
             print(f"Productos agotados: {', '.join(agotados)}")
 
-
-    elif opcion == 'x':
-        print("Gracias por usar la aplicación.")
+    elif opcion == "5": #Salir
+        print("\n >>>¡Nos vemos luego! \n")
         break
         
     else:

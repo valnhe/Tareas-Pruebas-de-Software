@@ -3,3 +3,26 @@
 2025-03-26 11:50:05,627 INFO: Producto 'jojojo' agregado con éxito.
 2025-03-26 11:52:45,479 INFO: Producto 'bbbbbbb' agregado con éxito.
 2025-03-26 12:15:26,806 INFO: Producto 'sasasa' agregado con éxito.
+2025-03-28 19:15:08,274 INFO: Usuario 'valnhe' registrado con éxito.
+2025-03-28 19:15:19,946 INFO: Se ha intentado loggear el usuario 'valnhe' no registrado.
+2025-03-28 19:15:29,879 INFO: Usuario 'valnhe' a iniciado sesión.
+2025-03-28 19:57:13,230 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-28 19:58:03,977 INFO: Se actualizó la cantidad de 'jojojo' a '10'.
+2025-03-28 20:04:51,772 INFO: Intento de inicio de sesión fallido para 'valne'.
+2025-03-28 20:05:00,220 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-28 20:06:51,202 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-28 20:07:19,498 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-28 20:08:27,636 INFO: Producto 'botas de las chicas superpoderosas' agregado con éxito.
+2025-03-28 20:09:06,677 INFO: Intento fallido de actualización: Producto 'botas de las chicas superpoderoas' no encontrado en la base de datos.
+2025-03-28 20:09:19,837 INFO: Se actualizó la cantidad de 'botas de las chicas superpoderosas' a '20'.
+2025-03-28 20:13:01,523 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-28 20:13:22,409 INFO: Se actualizó la cantidad de 'jojojo' a '100'.
+2025-03-28 20:14:14,249 INFO: Producto 'botella de agua' agregado con éxito.
+2025-03-28 20:19:46,729 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-28 20:20:07,460 INFO: Se actualizó la cantidad de 'botella de agua' de 50 a 10.
+2025-03-28 20:22:01,045 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-28 20:22:34,596 INFO: Producto 'tablet' agregado con éxito.
+2025-03-28 20:22:46,917 INFO: Se actualizó la cantidad de 'tablet' de 100 a 98.
+2025-03-28 20:24:00,407 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-28 20:24:42,781 INFO: Se actualizó la cantidad de 'tablet' de 98 a 70.
+2025-03-28 20:25:10,793 INFO: Producto 'velas' agregado con éxito.
