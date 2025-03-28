@@ -3,6 +3,7 @@ from CRUD import create_product
 from CRUD import read_products
 from CRUD import create_user
 from CRUD import verify_user
+from CRUD import update_product
 
 import sentry_sdk
 sentry_sdk.init(
@@ -21,14 +22,15 @@ def mostrar_menu():
     print("\nGestión de Inventario - Bodega")
     print("1. Agregar Producto")
     print("2. Ver Productos")
-    print("3. Generar Reporte") #esta opcion seguramente acabe siendo la ultima, cuando terminemos todo las reordenamos
+    print("3. Gestionar inventario")
+    print("4. Generar Reporte") #esta opcion seguramente acabe siendo la ultima, cuando terminemos todo las reordenamos
     print("x. Salir")
     
 sesion = False
 while True:
     menu_inicio()
     
-    opcion = input("Selecciona una opción: ")
+    opcion = input("Selecciona una opción(1-2): ")
     
     if opcion == "1":
         nombre = input("Ingrese su nombre de usuario: ")
@@ -46,7 +48,10 @@ while True:
             if sesion:
                 break
     elif opcion == "3":
+        print("Gracias por usar la aplicación.")
         break
+    else:
+        print("Opción inválida. Intenta de nuevo.")
     
     
     
@@ -92,6 +97,21 @@ while sesion:
             print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]} | {producto[5]}")
             
     elif opcion == "3":
+        producto = input("Producto cuyo stock desea actualizar: ")
+        while True:
+            try:
+                cantidad = int(input("Cantidad: "))
+                if cantidad < 0:
+                    print("La cantidad debe ser un número positivo.")
+                else:
+                    break
+            except ValueError:
+                print("Por favor, ingresa un número válido para la cantidad.")
+        update_product(producto, cantidad)
+            
+    
+            
+    elif opcion == "4":
         productos = read_products()
         cantidad = 0
         valor_total = 0
