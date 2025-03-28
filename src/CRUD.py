@@ -24,6 +24,20 @@ def read_products():
     conn.close()
     return productos
 
+def update_product(nombre, cantidad):
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("UPDATE productos SET cantidad = ? WHERE nombre = ?", (cantidad, nombre))
+    if cursor.rowcount == 0:
+        print("No se encontró el producto con ese nombre.")
+        logging.info(f"Se intento actualizar del producto '{nombre}' no presente en la base de datos")
+    else:    
+        conn.commit()
+        print("Producto actualizado correctamente.")
+        logging.info(f"Se actualizó la cantidad de '{nombre}' a '{cantidad}'")
+
+    conn.close()
+
 def create_user(nombre, contraseña):
     conexion = create_connection()
     cursor = conexion.cursor()
