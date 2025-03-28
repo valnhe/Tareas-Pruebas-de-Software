@@ -31,7 +31,7 @@ Esta tarea corresponde a una solución para gestionar el inventario de productos
 ### 2. ¿Cómo asegurarías que el programa cumpla el requerimiento? (Verificación)
 
 ### 3. Sobre la organización y el flujo del trabajo del proyecto
-
+Para la organización del proyecto, se utilizó **Slack** como la principal herramienta de comunicación. Se creó un espacio de trabajo dedicado para coordinar las tareas y discutir avances. Además, se integró Slack con GitHub para recibir notificaciones automáticas sobre cambios en el repositorio, lo que facilitó el seguimiento del desarrollo. También se elaboró una lista de tareas para registrar y monitorear las actividades pendientes, asegurando así un flujo de trabajo estructurado y eficiente. 
 
 #### Gestión del Código Fuente
 Para administrar el código fuente de este proyecto, se optó por elegir el enfoque de **Trunk-Based Development (TBD)**.  Esta elección se debe a que somos un equipo de dos personas y este modelo permite:
@@ -53,6 +53,17 @@ Para administrar el código fuente de este proyecto, se optó por elegir el enfo
 
 ### 4. Evidencias de flujo de trabajo y configuraciones realizadas
 
+#### 4.1. Integración de GitHub con Slack:
+
+![image](https://github.com/user-attachments/assets/1f39bd33-add7-4ebb-9834-2c12b1bb696d)
+
+#### 4.2. Organización de Tareas con Slack:
+![image](https://github.com/user-attachments/assets/6d7dc5d3-27bf-4938-bbdb-cae19d1b8060)
+
+#### 4.3. Evidencia de Trunk-Based Development (TBD)
+![image](https://github.com/user-attachments/assets/9480e13e-b5e1-4811-8a61-60a36668b739)
+
+
 ### 5. Sobre los problemas encontrados
 
 ## Instalación
@@ -73,3 +84,6 @@ Aquí tienes una guía rápida:
 5. Realiza tus Cambios (`git commit -m 'Add: alguna CaracterísticaIncreible'`)
 6. Haz Push a la Rama (`git push origin feature-CaracteristicaIncreible`)
 7. Abre una [_pull request_](https://github.com/valnhe/Tareas-Pruebas-de-Software/pulls)
+
+## Licencia
+ Por favor, revise [este link](LICENSE.md).
