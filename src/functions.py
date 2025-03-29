@@ -1,4 +1,6 @@
 from CRUD import read_products
+from CRUD import read_product
+from CRUD import read_products_category
 from CRUD import create_product
 
 
@@ -76,12 +78,25 @@ def menu_ver_productos():
             print("SUK | Nombre | Descripción | Cantidad | Precio | Categoría")
             for producto in productos:
                 print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]} | {producto[5]}")
+        
         elif opcion == "2":
             categoria = input("Ingrese la categoría: ")
-            print(categoria)
+            productos = read_products_category(categoria)
+            print(f"\nListado de Productos {categoria}")
+            print("SUK | Nombre | Descripción | Cantidad | Precio")
+            for producto in productos:
+                print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]}")
+            
         elif opcion == "3":
             nombre = input("Ingrese el nombre del producto: ")
-            print(nombre)
+            producto = read_product(nombre)
+            if producto:
+                print(f"Nombre: {producto[1]}")
+                print(f"Descripción: {producto[2]}")
+                print(f"Cantidad: {producto[3]}")
+                print(f"Precio: {producto[4]}")
+                print(f"Categoría: {producto[5]}")
+                
         elif opcion == "4":
             break
         else:

@@ -47,6 +47,40 @@ def read_products():
     finally:
         conexion.close()
 
+def read_product(nombre):
+    conexion = create_connection()
+    cursor = conexion.cursor()
+    
+    try:
+        cursor.execute("SELECT * FROM productos WHERE nombre = ?", (nombre))
+        producto = cursor.fetchone()
+        return producto
+    
+    except sqlite3.DatabaseError as e:
+        logging.error(f"Error al leer el producto: {e}")
+        print("\n >> Error al obtener el producto.")
+        return 0
+    
+    finally:
+        conexion.close()
+
+def read_products_category(categoria):
+    conexion = create_connection()
+    cursor = conexion.cursor()
+    
+    try:
+        cursor.execute("SELECT * FROM productos WHERE categoria = ?", (categoria))
+        productos = cursor.fetchall()
+        return productos
+    
+    except sqlite3.DatabaseError as e:
+        logging.error(f"Error al leer productos: {e}")
+        print(f"\n >> Error al obtener la lista de productos de categoria {categoria}")
+        return []
+    
+    finally:
+        conexion.close()
+
 def update_stock_product(nombre, nueva_cantidad):
     conexion = create_connection()
     cursor = conexion.cursor()
