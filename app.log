@@ -26,3 +26,47 @@
 2025-03-28 20:24:00,407 INFO: Usuario 'valnhe' ha iniciado sesión.
 2025-03-28 20:24:42,781 INFO: Se actualizó la cantidad de 'tablet' de 98 a 70.
 2025-03-28 20:25:10,793 INFO: Producto 'velas' agregado con éxito.
+2025-03-29 09:05:24,731 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:06:07,942 ERROR: Error al leer productos: Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.
+2025-03-29 09:06:34,008 ERROR: Error al leer productos: Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.
+2025-03-29 09:06:38,902 ERROR: Error al leer productos: Incorrect number of bindings supplied. The current statement uses 1, and there are 4 supplied.
+2025-03-29 09:06:56,385 ERROR: Error al leer el producto: Incorrect number of bindings supplied. The current statement uses 1, and there are 15 supplied.
+2025-03-29 09:07:24,116 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:07:42,939 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:09:36,937 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:09:54,891 ERROR: Error al leer el producto: Incorrect number of bindings supplied. The current statement uses 1, and there are 11 supplied.
+2025-03-29 09:11:18,884 ERROR: Error al leer productos: Incorrect number of bindings supplied. The current statement uses 1, and there are 11 supplied.
+2025-03-29 09:11:41,408 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:11:53,766 ERROR: Error al leer productos: Incorrect number of bindings supplied. The current statement uses 1, and there are 11 supplied.
+2025-03-29 09:13:13,657 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:13:22,072 ERROR: Error al leer productos: Incorrect number of bindings supplied. The current statement uses 1, and there are 11 supplied.
+2025-03-29 09:13:40,218 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:15:55,263 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:17:04,879 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:19:42,110 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:22:11,659 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:22:34,643 INFO: Producto 'sasasa' eliminado de la base de datos.
+2025-03-29 09:23:41,418 INFO: Producto 'Taza del Gato con Botas' agregado con éxito.
+2025-03-29 09:30:08,280 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:31:05,452 ERROR: Error en la base de datos al actualizar producto: no such column: id
+2025-03-29 09:31:49,901 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:32:03,005 INFO: Producto con SKU '4' actualizado: Nombre='ola', Descripción='jjjjjjjjj', Categoría='aaaaaaaaaaa', Precio='33333.0'
+2025-03-29 09:35:09,275 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:36:09,481 INFO: Producto con SKU '6' actualizado: Nombre='botas de las chicas superpoderosas', Descripción='botas que te hacen ver mas linda!!', Categoría='ropa', Precio='9888.0'
+2025-03-29 09:40:01,080 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:40:48,560 INFO: Producto con SKU '2' actualizado: Nombre='vela rosa', Descripción='iiii', Categoría='zapatgos', Precio='10000.0'
+2025-03-29 09:43:17,472 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 09:44:23,598 INFO: Producto con SKU '1' actualizado: Nombre='camisa deportiva', Descripción='Camisa cómoda y transpirable para actividades deportivas, hecha de material de secado rápido.', Categoría='ropa deportiva', Precio='15990.0'
+2025-03-29 09:45:06,944 INFO: Producto con SKU '2' actualizado: Nombre='laptop gaming', Descripción='Laptop potente para gaming, con procesador de última generación y tarjeta gráfica de alto rendimiento.', Categoría='electronica', Precio='675990.0'
+2025-03-29 09:46:39,365 INFO: Producto con SKU '3' actualizado: Nombre='parlante bluetooth portatiles', Descripción='Altavoces compactos con sonido de alta calidad, conexión inalámbrica y batería de larga duración, ideales para llevar a todas partes.', Categoría='electronica', Precio='27990.0'
+2025-03-29 09:48:08,856 INFO: Producto con SKU '4' actualizado: Nombre='refrigerador doble puerta', Descripción='Refrigerador de gran capacidad con tecnología de eficiencia energética y sistema de enfriamiento rápido.', Categoría='hogar', Precio='894990.0'
+2025-03-29 09:48:59,134 INFO: Producto con SKU '6' actualizado: Nombre='plancha de vapor', Descripción='Plancha de vapor con suela antiadherente y ajuste de temperatura para todo tipo de tejidos.', Categoría='hogar', Precio='34690.0'
+2025-03-29 09:50:33,992 INFO: Producto con SKU '7' actualizado: Nombre='botella de agua de 2L', Descripción='fantastico producto que permite mantenerte hidratado', Categoría='hogar', Precio='7890.0'
+2025-03-29 09:51:21,320 INFO: Producto con SKU '8' actualizado: Nombre='pantalones de yoga', Descripción='Pantalones cómodos y elásticos, perfectos para actividades deportivas o descanso, con tela transpirable.', Categoría='ropa deportiva', Precio='17990.0'
+2025-03-29 09:51:52,880 INFO: Producto con SKU '9' actualizado: Nombre='cafetera espresso', Descripción='Cafetera compacta que prepara espresso, cappuccino y latte con facilidad, ideal para los amantes del café.', Categoría='hogar', Precio='69990.0'
+2025-03-29 09:52:40,699 INFO: Producto con SKU '10' actualizado: Nombre='taza del gato con botas', Descripción='asombrosa taza del gato con botas ilimitada 250ml', Categoría='hogar', Precio='9990.0'
+2025-03-29 09:53:56,035 INFO: Se actualizó la cantidad de 'botella de agua de 2L' de 10 a 0.
+2025-03-29 10:01:01,337 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 10:01:31,415 INFO: Se actualizó la cantidad de 'refrigerador doble puerta' de 1 a 2.
+2025-03-29 10:03:57,098 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-29 10:04:27,309 INFO: Se actualizó la cantidad de 'camisa deportiva' de 4 a 3.

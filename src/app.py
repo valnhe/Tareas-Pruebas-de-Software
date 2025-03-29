@@ -1,6 +1,7 @@
 
 from CRUD import update_stock_product
 from CRUD import read_products
+from CRUD import read_product
 
 from authentication import create_user
 from authentication import verify_user
@@ -48,7 +49,7 @@ while True:
         print("\n >>>¡Nos vemos luego!")
         break
     else:
-        print("Opción inválida. Intenta de nuevo.")
+        print(" >> Opción inválida. Intenta de nuevo.")
 
 # Menú principal
 while sesion:
@@ -64,15 +65,21 @@ while sesion:
         
     elif opcion == "3": #Gestionar Stock
         producto = input("\n > Ingrese el nombre del producto cuyo stock desea actualizar: ")
+        product = read_product(producto)
+        if product:
+            print(f"\n >> Cantidad actual del producto '{producto}': {product[3]}")
+
         while True:
             try:
-                cantidad = int(input(" > Cantidad: "))
+                cantidad = int(input(" > Ingrese nueva cantidad: "))
                 if cantidad < 0:
                     print("La cantidad debe ser un número positivo.")
                 else:
                     break
             except ValueError:
                 print("Por favor, ingresa un número válido para la cantidad.")
+
+        
         update_stock_product(producto, cantidad)
             
             
@@ -91,7 +98,7 @@ while sesion:
         print(f"> Cantidad de productos: {cantidad}")
         print(f"> Valor total del inventario: {valor_total}")
         if len(agotados):
-            print(f"Productos agotados: {', '.join(agotados)}")
+            print(f"> Productos agotados: {', '.join(agotados)}")
 
     elif opcion == "5": #Salir
         print("\n >>>¡Nos vemos luego! \n")
