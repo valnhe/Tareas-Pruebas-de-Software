@@ -52,24 +52,7 @@ def read_product(nombre):
     cursor = conexion.cursor()
     
     try:
-        cursor.execute("SELECT * FROM productos WHERE nombre = ?", (nombre,))
-        producto = cursor.fetchone()
-        return producto
-    
-    except sqlite3.DatabaseError as e:
-        logging.error(f"Error al leer el producto: {e}")
-        print("\n >> Error al obtener el producto.")
-        return 0
-    
-    finally:
-        conexion.close()
-
-def read_product_by_sku(sku):
-    conexion = create_connection()
-    cursor = conexion.cursor()
-    
-    try:
-        cursor.execute("SELECT * FROM productos WHERE sku = ?", (sku,))
+        cursor.execute("SELECT * FROM productos WHERE nombre = ?", (nombre))
         producto = cursor.fetchone()
         return producto
     
@@ -86,7 +69,7 @@ def read_products_category(categoria):
     cursor = conexion.cursor()
     
     try:
-        cursor.execute("SELECT * FROM productos WHERE categoria = ?", (categoria,))
+        cursor.execute("SELECT * FROM productos WHERE categoria = ?", (categoria))
         productos = cursor.fetchall()
         return productos
     
@@ -97,49 +80,6 @@ def read_products_category(categoria):
     
     finally:
         conexion.close()
-
-def update_product_by_sku(sku, nuevo_nombre=None, nueva_descripcion=None, nueva_categoria=None, nuevo_precio=None):
-    conexion = create_connection()
-    cursor = conexion.cursor()
-
-    try:
-        cursor.execute("SELECT nombre, descripcion, categoria, precio FROM productos WHERE sku = ?", (sku,))
-        producto = cursor.fetchone()
-
-        if not producto:
-            print(f"\n >> No se encontró ningún producto con el SKU '{sku}'.")
-            logging.info(f"Intento fallido de actualización: Producto con SKU '{sku}' no encontrado.")
-            return False
-
-        nombre_actual, descripcion_actual, categoria_actual, precio_actual = producto
-
-        # Mantener valores originales si el usuario no ingresa uno nuevo
-        nuevo_nombre = nuevo_nombre if nuevo_nombre else nombre_actual
-        nueva_descripcion = nueva_descripcion if nueva_descripcion else descripcion_actual
-        nueva_categoria = nueva_categoria if nueva_categoria else categoria_actual
-        nuevo_precio = nuevo_precio if nuevo_precio is not None else precio_actual
-
-        # Actualizar el producto
-        cursor.execute("""
-            UPDATE productos 
-            SET nombre = ?, descripcion = ?, categoria = ?, precio = ? 
-            WHERE sku = ?
-        """, (nuevo_nombre, nueva_descripcion, nueva_categoria, nuevo_precio, sku))
-
-        conexion.commit()
-        print(f"\n >> Producto con SKU '{sku}' actualizado correctamente.")
-        logging.info(f"Producto con SKU '{sku}' actualizado: Nombre='{nuevo_nombre}', Descripción='{nueva_descripcion}', Categoría='{nueva_categoria}', Precio='{nuevo_precio}'")
-
-        return True
-
-    except sqlite3.DatabaseError as e:
-        logging.error(f"Error en la base de datos al actualizar producto: {e}")
-        print("\n >> Error al actualizar el producto.")
-        return False
-
-    finally:
-        conexion.close()
-
 
 def update_stock_product(nombre, nueva_cantidad):
     conexion = create_connection()
@@ -155,6 +95,8 @@ def update_stock_product(nombre, nueva_cantidad):
             return
         
         cantidad_actual = resultado[0]
+        print(f"\n >> Cantidad actual de '{nombre}': {cantidad_actual}")
+        print(f" >> Nueva cantidad de '{nombre}': {nueva_cantidad}")
         
         cursor.execute("UPDATE productos SET cantidad = ? WHERE nombre = ?", (nueva_cantidad, nombre))
         conexion.commit()
@@ -165,34 +107,6 @@ def update_stock_product(nombre, nueva_cantidad):
     except sqlite3.DatabaseError as e:
         logging.error(f"Error en la base de datos al actualizar producto: {e}")
         print("\n > Error al actualizar el producto.")
-
-    finally:
-        conexion.close()
-
-def delete_product(nombre):
-    conexion = create_connection()
-    cursor = conexion.cursor()
-
-    try:
-        cursor.execute("SELECT * FROM productos WHERE nombre = ?", (nombre,))
-        producto = cursor.fetchone()
-        
-        if not producto:
-            print(f"\n >> No se encontró el producto '{nombre}' en la base de datos.")
-            logging.info(f"Intento fallido de eliminación: Producto '{nombre}' no encontrado.")
-            return False
-
-        cursor.execute("DELETE FROM productos WHERE nombre = ?", (nombre,))
-        conexion.commit()
-        print(f"\n >> Producto '{nombre}' eliminado correctamente.")
-        logging.info(f"Producto '{nombre}' eliminado de la base de datos.")
-
-        return True
-
-    except sqlite3.DatabaseError as e:
-        logging.error(f"Error en la base de datos al eliminar producto: {e}")
-        print("\n >> Error al eliminar el producto.")
-        return False
 
     finally:
         conexion.close()

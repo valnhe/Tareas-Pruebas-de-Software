@@ -1,10 +1,9 @@
-from CRUD import create_product
 from CRUD import read_products
 from CRUD import read_product
-from CRUD import read_product_by_sku
 from CRUD import read_products_category
-from CRUD import update_product_by_sku
-from CRUD import delete_product
+from CRUD import create_product
+
+
 
 def menu_inicio():
     print("\n--- Inicio de Sesión ---")
@@ -53,31 +52,15 @@ def menu_gestionar_inventario():
 
 
         elif opcion == "2":
-            sku = int(input("\n > Ingrese el SKU del producto a actualizar: "))
-
-            print("\n >> Detalles actuales del producto a actualizar:")
-            producto = read_product_by_sku(sku)
-            if producto:
-                print(f" >>> Nombre: {producto[1]}")
-                print(f" >>> Descripción: {producto[2]}")
-                print(f" >>> Precio: {producto[4]}")
-                print(f" >>> Categoría: {producto[5]}")
-
-            nuevo_nombre = input("\n > Ingrese nuevo nombre (dejar vacío para no cambiar): ")
-            nueva_descripcion = input(" > Ingrese nueva descripción (dejar vacío para no cambiar): ")
-            nuevo_precio = solicitar_numero(" > Ingrese nuevo precio (deja en blanco para mantener el actual): ", tipo=float)
-            nueva_categoria = input(" > Ingrese nueva categoria (dejar vacío para no cambiar): ")
-
-            update_product_by_sku(sku, nuevo_nombre, nueva_descripcion, nueva_categoria, nuevo_precio)
-
+            categoria = input("Ingrese la categoría: ")
+            print(categoria)
         elif opcion == "3":
-            nombre = input("\n > Ingrese el nombre del producto: ")
-            delete_product(nombre)
-
+            nombre = input("Ingrese el nombre del producto: ")
+            print(nombre)
         elif opcion == "4":
             break
         else:
-            print(" >> Opción no válida.")
+            print("Opción no válida.")
 
 def menu_ver_productos():
     while True:
@@ -91,31 +74,30 @@ def menu_ver_productos():
 
         if opcion == "1":
             productos = read_products()
-            print("\n >> Listado de Productos: \n")
+            print("\nListado de Productos")
             print("SUK | Nombre | Descripción | Cantidad | Precio | Categoría")
             for producto in productos:
                 print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]} | {producto[5]}")
         
         elif opcion == "2":
-            categoria = input("\n > Ingrese la categoría: ")
+            categoria = input("Ingrese la categoría: ")
             productos = read_products_category(categoria)
-            print(f"\n >> Listado de Productos {categoria}: \n")
+            print(f"\nListado de Productos {categoria}")
             print("SUK | Nombre | Descripción | Cantidad | Precio")
             for producto in productos:
                 print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]}")
             
         elif opcion == "3":
-            nombre = input("\n > Ingrese el nombre del producto: ")
+            nombre = input("Ingrese el nombre del producto: ")
             producto = read_product(nombre)
             if producto:
-                print("\n >> Detalles del producto encontrado:")
-                print(f" >> Nombre: {producto[1]}")
-                print(f" >> Descripción: {producto[2]}")
-                print(f" >> Cantidad: {producto[3]}")
-                print(f" >> Precio: {producto[4]}")
-                print(f" >> Categoría: {producto[5]}")
+                print(f"Nombre: {producto[1]}")
+                print(f"Descripción: {producto[2]}")
+                print(f"Cantidad: {producto[3]}")
+                print(f"Precio: {producto[4]}")
+                print(f"Categoría: {producto[5]}")
                 
         elif opcion == "4":
             break
         else:
-            print(" >> Opción no válida.")
+            print("Opción no válida.")
