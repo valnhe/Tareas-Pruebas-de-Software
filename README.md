@@ -1,9 +1,9 @@
 <a name="readme-top"></a>
 <div align="center">
 
-# Tareas de INF331 - Pruebas de Software
+# Tarea 1 de INF331 - Pruebas de Software
 
-Esta tarea corresponde a una solución para gestionar el inventario de productos en una bodega de negocio. La aplicación permite a los usuarios realizar las operaciones básicas de CRUD (crear, leer, actualizar y eliminar) sobre los productos, gestionar el stock mediante actualizaciones, y blablabla
+Esta aplicación permite gestionar el inventario de productos en la bodega de un negocio, facilitando operaciones de CRUD, control de stock, búsqueda y generación de reportes. Además, incluye autenticación para un acceso seguro. El desarrollo se organizó con Slack y GitHub, con manejo de excepciones mediante `try-catch-finally` y monitoreo de errores con Sentry.
 
 </div>
 
@@ -32,6 +32,8 @@ Esta tarea corresponde a una solución para gestionar el inventario de productos
 
 ### 3. Sobre la organización y el flujo del trabajo del proyecto
 Para la organización del proyecto, se utilizó **Slack** como la principal herramienta de comunicación. Se creó un espacio de trabajo dedicado para coordinar las tareas y discutir avances. Además, se integró Slack con GitHub para recibir notificaciones automáticas sobre cambios en el repositorio, lo que facilitó el seguimiento del desarrollo. También se elaboró una lista de tareas para registrar y monitorear las actividades pendientes, asegurando así un flujo de trabajo estructurado y eficiente. 
+
+En cuanto al manejo de errores, se implementó el método `try-catch-finally` para gestionar excepciones y garantizar un control adecuado de fallos en la ejecución del código. Adicionalmente, se integró **Sentry** como herramienta de monitoreo para registrar y analizar logs de errores, lo que permite detectar y resolver problemas de manera más rápida y eficiente.
 
 #### Gestión del Código Fuente
 Para administrar el código fuente de este proyecto, se optó por elegir el enfoque de **Trunk-Based Development (TBD)**.  Esta elección se debe a que somos un equipo de dos personas y este modelo permite:
@@ -63,6 +65,8 @@ Para administrar el código fuente de este proyecto, se optó por elegir el enfo
 #### 4.3. Evidencia de Trunk-Based Development (TBD)
 ![image](https://github.com/user-attachments/assets/9480e13e-b5e1-4811-8a61-60a36668b739)
 
+#### 4.4. Integración de Sentry
+![image](https://github.com/user-attachments/assets/4a039dee-0841-41bc-820c-8932d59ed16c)
 
 ### 5. Sobre los problemas encontrados
 
