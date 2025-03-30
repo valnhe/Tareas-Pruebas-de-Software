@@ -12,6 +12,7 @@ Esta aplicación permite gestionar el inventario de productos en la bodega de un
 
 - [Tareas de INF331 - Pruebas de Software](#tareas-de-inf331---pruebas-de-software)
 - [Grupo de Trabajo](#-grupo-de-trabajo)
+- [Requerimiento Especificado](#requerimiento-especificado)
 - [Preguntas](#preguntas)
 - [Instalación](#instalación)
 - [¿Cómo usar?](#cómo-usar)
@@ -24,11 +25,46 @@ Esta aplicación permite gestionar el inventario de productos en la bodega de un
 - Valentina Castillo  - ROL: 202021006-3
 - Javier Hormaechea - ROL: 202003017-0
 
+## Requerimiento Especificado
+El sistema debe ser una aplicación que se utilice a través de la **consola**, el cual permite la gestión del inventario de productos en la bodega de un negocio. Todos estos datos se deben almacenar en una base de datos, y se deben contar con las siguientes funcionalidades:
+### 1. CRUD de Productos:
+El sistema debe permitir a los usuarios:
+1. Crear un producto ingresando los siguientes datos: Nombre, descripción, cantidad disponible (número entero), precio unitario (valor decimal) y categoría.
+2. Consultar productos mostrando una lista con todos los productos registrados en la base de datos.
+3. Actualizar productos permitiendo modificar los campos de un producto existente mediante su SKU.
+4. Eliminar productos usando su nombre como identificador.
+
+### 2. Gestión de Stock:
+1. El usuario podrá actualizar la cantidad de un producto ingresando dirctamente el nuevo valor en la base d dtos.
+2. La actualización se hará mediante el nombre del producto.
+3. Se debe validar que la cantidad sea un número positivo.
+
+### 3. Filtrado y Búsqueda
+1. El sistema debe permitir filtrar por categoría: mostrar solo los productos de una categoría específica.
+2. El sistema debe permitir realizar una búsqueda por nombre, para mostrar todos los datos realizado a dicho producto.
+
+### 4. Gestión de Reportes
+1. Se debe mostrar un resumen del inventario, incluyendo: Número otal de productos ingresados, valor total del inventario y una lista de los producos agotados.
+2. El reporte igual debe mostrarse por consola.
+
+### 5. Autenticación
+1. El sistema requerirá un nombre de usuario y contraseña para acceder.
+2. Solo usuarios autenticados podrán realizar operaciones en el inventario.
+3. Solo usuarios autenticados podrán realizar operaciones en el inventario.
+
 ## Preguntas
 
 ### 1. ¿Cómo especificarías mejor el requerimiento? (Validación)
+Para asegurarnos que que realmente estemos resolviendo el problema correcto, se pueden realizar las siguientes acciones:
+- Revisar con el cliente si los requisitos definidos cumplen con la necesidad.
+- Validación de Requisitos: aclarar ambigüedades y suposiciones (en este caso en especifico, a través del Foro de la Tarea).
+- Pruebas Funcionales: Se realizan pruebas para verificar que el software realiza sus funciones de acuerdo con los requisitos especificados.
 
 ### 2. ¿Cómo asegurarías que el programa cumpla el requerimiento? (Verificación)
+Para asegurarnos si estamos resolviendo correctamente el problema, se pueden realizar las siguientes acciones:
+- Revisión de Código y Software: Se analiza el sistema en busca de defectos.
+- Verificación de Diseño: Se revisa la arquitectura y el diseño del software para asegurarse de que cumple con los requisitos y está bien estructurado.
+- Pruebas de Unidad e Integración.
 
 ### 3. Sobre la organización y el flujo del trabajo del proyecto
 Para la organización del proyecto, se utilizó **Slack** como la principal herramienta de comunicación. Se creó un espacio de trabajo dedicado para coordinar las tareas y discutir avances. Además, se integró Slack con GitHub para recibir notificaciones automáticas sobre cambios en el repositorio, lo que facilitó el seguimiento del desarrollo. También se elaboró una lista de tareas para registrar y monitorear las actividades pendientes, asegurando así un flujo de trabajo estructurado y eficiente. 
@@ -71,11 +107,28 @@ Para administrar el código fuente de este proyecto, se optó por elegir el enfo
 ### 5. Sobre los problemas encontrados
 
 ## Instalación
-blabla
+Para instalar y ejecutar el proyecto, sigue estos pasos:
+1. Descargar el código fuente o clonar el repositorio con el siguiente comando:
+```
+git clone https://github.com/valnhe/Tareas-Pruebas-de-Software.git
+cd tu-repo
+```
+2. Instalar Python
+Asegúrate de tener Python 3 instalado en tu sistema. Puedes verificarlo con:
+```
+python3 --version
+```
 
 ## ¿Cómo usar?
-blabla
-
+Para ejecutar el probrama, usa el siguiente comando desde la raíz del proyecto:
+```
+python src/app.py
+```
+### Primer uso
+1. Registrarse o iniciar sesión.
+2. Después de registrarse o iniciar sesión, se entrará entrará automáticamente al menú principal para gestionar la base de datos.
+   - **Nota**: La base de datos ya contiene datos preexistentes del repositorio, por lo que se puede comenzar a trabajar directamente.
+     
 ## ¿Cómo contribuir?
 
 Si tienes alguna sugerencia que podría mejorar el proyecto, por favor haz un [_fork_](https://github.com/valnhe/Tareas-Pruebas-de-Software/fork) del repositorio y crea una [_pull request_](https://github.com/valnhe/Tareas-Pruebas-de-Software/pulls). O simplemente puedes crear una [_issue_](https://github.com/valnhe/Tareas-Pruebas-de-Software/issues) y lo estaremos leyendo 😊.
@@ -90,4 +143,4 @@ Aquí tienes una guía rápida:
 7. Abre una [_pull request_](https://github.com/valnhe/Tareas-Pruebas-de-Software/pulls)
 
 ## Licencia
- Por favor, revise [este link](LICENSE.md).
+ Por favor, revise [este link](https://github.com/valnhe/Tareas-Pruebas-de-Software/blob/main/LICENSE).
