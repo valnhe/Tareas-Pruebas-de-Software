@@ -35,7 +35,7 @@ El sistema debe permitir a los usuarios:
 4. Eliminar productos usando su nombre como identificador.
 
 ### 2. Gestión de Stock:
-1. El usuario podrá actualizar la cantidad de un producto ingresando dirctamente el nuevo valor en la base d dtos.
+1. El usuario podrá actualizar la cantidad de un producto ingresando dirctamente el nuevo valor en la base de datos.
 2. La actualización se hará mediante el nombre del producto.
 3. Se debe validar que la cantidad sea un número positivo.
 
@@ -44,13 +44,13 @@ El sistema debe permitir a los usuarios:
 2. El sistema debe permitir realizar una búsqueda por nombre, para mostrar todos los datos realizado a dicho producto.
 
 ### 4. Gestión de Reportes
-1. Se debe mostrar un resumen del inventario, incluyendo: Número otal de productos ingresados, valor total del inventario y una lista de los producos agotados.
+1. Se debe mostrar un resumen del inventario, incluyendo: Número total de productos ingresados, valor total del inventario y una lista de los producos agotados.
 2. El reporte igual debe mostrarse por consola.
 
 ### 5. Autenticación
 1. El sistema requerirá un nombre de usuario y contraseña para acceder.
 2. Solo usuarios autenticados podrán realizar operaciones en el inventario.
-3. Solo usuarios autenticados podrán realizar operaciones en el inventario.
+3. Se validará la combinación de usuario y contraseña con una base de datos de usuarios.
 
 ## Preguntas
 
