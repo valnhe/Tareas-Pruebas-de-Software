@@ -23,8 +23,11 @@ def mostrar_menu():
 
 def solicitar_numero(mensaje, tipo=float):
     while True:
+        entrada = input(mensaje).strip()
+        if entrada == "": 
+            return None
         try:
-            valor = tipo(input(mensaje))
+            valor = tipo(entrada)
             if valor >= 0:
                 return valor
             else:
@@ -55,20 +58,22 @@ def menu_gestionar_inventario():
         elif opcion == "2":
             sku = int(input("\n > Ingrese el SKU del producto a actualizar: "))
 
-            print("\n >> Detalles actuales del producto a actualizar:")
             producto = read_product_by_sku(sku)
             if producto:
+                print("\n >> Detalles actuales del producto a actualizar:")
                 print(f" >>> Nombre: {producto[1]}")
                 print(f" >>> Descripción: {producto[2]}")
                 print(f" >>> Precio: {producto[4]}")
                 print(f" >>> Categoría: {producto[5]}")
 
-            nuevo_nombre = input("\n > Ingrese nuevo nombre (dejar vacío para no cambiar): ")
-            nueva_descripcion = input(" > Ingrese nueva descripción (dejar vacío para no cambiar): ")
-            nuevo_precio = solicitar_numero(" > Ingrese nuevo precio (deja en blanco para mantener el actual): ", tipo=float)
-            nueva_categoria = input(" > Ingrese nueva categoria (dejar vacío para no cambiar): ")
+                nuevo_nombre = input("\n > Ingrese nuevo nombre (dejar vacío para no cambiar): ")
+                nueva_descripcion = input(" > Ingrese nueva descripción (dejar vacío para no cambiar): ")
+                nuevo_precio = solicitar_numero(" > Ingrese nuevo precio (deja en blanco para mantener el actual): ", tipo=float)
+                nueva_categoria = input(" > Ingrese nueva categoria (dejar vacío para no cambiar): ")
 
-            update_product_by_sku(sku, nuevo_nombre, nueva_descripcion, nueva_categoria, nuevo_precio)
+                update_product_by_sku(sku, nuevo_nombre, nueva_descripcion, nueva_categoria, nuevo_precio)
+            else:
+                print(" >> Producto no encontrado.")
 
         elif opcion == "3":
             nombre = input("\n > Ingrese el nombre del producto: ")
@@ -99,10 +104,14 @@ def menu_ver_productos():
         elif opcion == "2":
             categoria = input("\n > Ingrese la categoría: ")
             productos = read_products_category(categoria)
-            print(f"\n >> Listado de Productos {categoria}: \n")
-            print("SUK | Nombre | Descripción | Cantidad | Precio")
-            for producto in productos:
-                print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]}")
+
+            if productos:
+                print(f"\n >> Listado de Productos {categoria}: \n")
+                print("SUK | Nombre | Descripción | Cantidad | Precio")
+                for producto in productos:
+                    print(f"{producto[0]} | {producto[1]} | {producto[2]} | {producto[3]} | {producto[4]}")
+            else:
+                print(" >> No se encontraron productos en esta categoría.")
             
         elif opcion == "3":
             nombre = input("\n > Ingrese el nombre del producto: ")
@@ -114,7 +123,8 @@ def menu_ver_productos():
                 print(f" >> Cantidad: {producto[3]}")
                 print(f" >> Precio: {producto[4]}")
                 print(f" >> Categoría: {producto[5]}")
-                
+            else:
+                print(" >> Producto no encontrado.")
         elif opcion == "4":
             break
         else:

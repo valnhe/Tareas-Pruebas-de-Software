@@ -70,3 +70,26 @@
 2025-03-29 10:01:31,415 INFO: Se actualizó la cantidad de 'refrigerador doble puerta' de 1 a 2.
 2025-03-29 10:03:57,098 INFO: Usuario 'valnhe' ha iniciado sesión.
 2025-03-29 10:04:27,309 INFO: Se actualizó la cantidad de 'camisa deportiva' de 4 a 3.
+2025-03-31 19:47:15,830 INFO: Intento de inicio de sesión fallido para 'valne'.
+2025-03-31 19:47:25,370 INFO: Intento de inicio de sesión fallido para 'valnhe'.
+2025-03-31 19:48:30,725 INFO: Intento de inicio de sesión fallido para 'vanhe'.
+2025-03-31 19:48:47,306 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-31 22:13:46,575 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-03-31 22:15:27,863 INFO: Intento fallido de eliminación: Producto 'poto pelao' no encontrado.
+2025-03-31 22:16:58,504 INFO: Producto con SKU '10' actualizado: Nombre='taza del gato con botas', Descripción='asombrosa taza del gato con botas ilimitada 250ml', Categoría='hogar', Precio='8990.0'
+2025-03-31 22:18:02,351 INFO: Intento fallido de actualización: Producto con SKU '100' no encontrado.
+2025-04-03 21:23:25,122 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-04-03 21:25:30,911 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-04-03 21:26:47,793 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-04-03 21:27:30,938 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-04-03 21:46:36,163 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-04-03 21:47:02,283 INFO: Producto con SKU '1' actualizado: Nombre='camisa deportiva', Descripción='Camisa cómoda y transpirable para actividades deportivas, hecha de material de secado rápido.', Categoría='ropa deportiva', Precio='19.0'
+2025-04-03 21:51:27,822 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-04-03 21:51:34,627 INFO: Producto con SKU '1' actualizado: Nombre='camisa deportiva', Descripción='Camisa cómoda y transpirable para actividades deportivas, hecha de material de secado rápido.', Categoría='ropa deportiva', Precio='19.0'
+2025-04-03 21:52:34,395 INFO: Producto con SKU '1' actualizado: Nombre='camisa deportiva', Descripción='Camisa cómoda y transpirable para actividades deportivas, hecha de material de secado rápido.', Categoría='ropa deportiva', Precio='19.0'
+2025-04-03 21:54:03,972 INFO: Producto con SKU '1' actualizado: Nombre='camisa deportiva', Descripción='Camisa cómoda y transpirable para actividades deportivas, hecha de material de secado rápido.', Categoría='ropa deportiva', Precio='19.0'
+2025-04-03 21:54:12,871 INFO: Usuario 'valnhe' ha iniciado sesión.
+2025-04-03 21:54:22,450 INFO: Producto con SKU '1' actualizado: Nombre='camisa deportiva', Descripción='Camisa cómoda y transpirable para actividades deportivas, hecha de material de secado rápido.', Categoría='ropa deportiva', Precio='18990.0'
+2025-04-03 21:54:56,096 INFO: Producto con SKU '10' actualizado: Nombre='taza del gato con botas', Descripción='asombrosa taza del gato con botas ilimitada 250ml', Categoría='hogar', Precio='8990.0'
+2025-04-03 21:55:12,199 INFO: Producto con SKU '10' actualizado: Nombre='taza del gato con botas', Descripción='asombrosa taza del gato con botas ilimitada 250ml', Categoría='hogar', Precio='9990.0'
+2025-04-03 21:55:20,519 INFO: Producto con SKU '10' actualizado: Nombre='taza del gato con botas', Descripción='asombrosa taza del gato con botas ilimitada 250ml', Categoría='hogar', Precio='9990.0'
