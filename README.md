@@ -107,8 +107,8 @@ Para administrar el código fuente de este proyecto, se optó por elegir el enfo
 
 ### 5. Sobre los problemas encontrados
 
-## Pruebas de Software
-La estrategia de pruebas en nuestro proyecto se estructuró en dos ciclos. En el primero, cada integrante preparó y ejecutó pruebas de manera individual sobre las funcionalidades que se consideraron como problemáticas. Esta fase permitió tener un primer acercamiento a los fallos. En el segundo ciclo, se consolidaron las pruebas realizadas, ya que se eliminaron las repetidas y se ejecutaron nuevamente de manera conjunta. 
+#### Pruebas de Software
+La estrategia de pruebas en nuestro proyecto se estructuró en dos ciclos. En el primero, cada integrante preparó y ejecutó pruebas de manera individual sobre las funcionalidades que se consideraron como problemáticas. Esta fase permitió tener un primer acercamiento a los fallos, además de dar cuenta ciertas indefiniciones para algunos casos particulares que fueron discutidas y acordadas. En el segundo ciclo, se consolidaron las pruebas realizadas, ya que se eliminaron las repetidas y se ejecutaron nuevamente de manera conjunta. 
 
 Se realizaron algunas **pruebas cruzadas** donde cada miembro del equipo revisó el trabajo de otro. Esto permitió detectar posibles errores que podrían haberse pasado por alto en las pruebas individuales y garantizó una mayor cobertura. Además, dado que se separaron las funciones en distintos archivos, se realizaron **pruebas de integración** para verificar que los diferentes módulos del sistema interactuaran correctamente entre sí.
 
