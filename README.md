@@ -14,6 +14,7 @@ Esta aplicación permite gestionar el inventario de productos en la bodega de un
 - [Grupo de Trabajo](#-grupo-de-trabajo)
 - [Requerimiento Especificado](#requerimiento-especificado)
 - [Preguntas](#preguntas)
+- [Pruebas de Software](#pruebas-de-software)
 - [Instalación](#instalación)
 - [¿Cómo usar?](#cómo-usar)
 - [¿Cómo contribuir?](#cómo-contribuir)
@@ -105,6 +106,13 @@ Para administrar el código fuente de este proyecto, se optó por elegir el enfo
 ![image](https://github.com/user-attachments/assets/4a039dee-0841-41bc-820c-8932d59ed16c)
 
 ### 5. Sobre los problemas encontrados
+
+## Pruebas de Softwares
+La estrategia de pruebas en nuestro proyecto se estructuró en dos ciclos. En el primero, cada integrante preparó y ejecutó pruebas de manera individual sobre las funcionalidades que se consideraron como problemáticas. Esta fase permitió verificar que cada componente funcionara correctamente de manera aislada. En el segundo ciclo, se consolidaron las pruebas realizadas, ya que se eliminaron las repetidas y se ejecutaron nuevamente de manera conjunta. 
+
+Se realizaron algunas **pruebas cruzadas** donde cada miembro del equipo revisó el trabajo de otro. Esto permitió detectar posibles errores que podrían haberse pasado por alto en las pruebas individuales y garantizó una mayor cobertura. Además, dado que se separaron las funciones en distintos archivos, se realizaron **pruebas de integración** para verificar que los diferentes módulos del sistema interactuaran correctamente entre sí.
+
+Los ciclos de pruebas completos pueden verse en el archivo Excel adjunto.
 
 ## Instalación
 Para instalar y ejecutar el proyecto, sigue estos pasos:
