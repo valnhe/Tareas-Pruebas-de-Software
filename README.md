@@ -106,8 +106,10 @@ Para administrar el código fuente de este proyecto, se optó por elegir el enfo
 ![image](https://github.com/user-attachments/assets/4a039dee-0841-41bc-820c-8932d59ed16c)
 
 ### 5. Sobre los problemas encontrados
+#### 5.1 Problemas durante el desarrollo
+Si bien el enfoque de **Trunk-Based Development (TBD)** era, en teoría, adecuado para el trabajo. Algo con lo que no se conto es que, al ser solo 2 personas, se hacia un poco tosco el desarrollo, dado que para poder hacer un merge era necesario que el otro estuviera disponible, y como se trabajo con ramas de corta duración se generaron muchos tiempos muertos.
 
-#### Pruebas de Software
+#### 5.2 Pruebas de Software
 La estrategia de pruebas en nuestro proyecto se estructuró en dos ciclos. En el primero, cada integrante preparó y ejecutó pruebas de manera individual sobre las funcionalidades que se consideraron como problemáticas. Esta fase permitió tener un primer acercamiento a los fallos, además de dar cuenta ciertas indefiniciones para algunos casos particulares que fueron discutidas y acordadas. En el segundo ciclo, se consolidaron las pruebas realizadas, ya que se eliminaron las repetidas y se ejecutaron nuevamente de manera conjunta. 
 
 Se realizaron algunas **pruebas cruzadas** donde cada miembro del equipo revisó el trabajo de otro. Esto permitió detectar posibles errores que podrían haberse pasado por alto en las pruebas individuales y garantizó una mayor cobertura. Además, dado que se separaron las funciones en distintos archivos, se realizaron **pruebas de integración** para verificar que los diferentes módulos del sistema interactuaran correctamente entre sí.
